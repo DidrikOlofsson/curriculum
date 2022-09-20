@@ -3,28 +3,143 @@ layout: default
 title: "Didrik Olofsson"
 ---
 
-<div class="grid grid-cols-4 gap-4 h-full">
-  <div class="bg-slate-100 p-4 h-fit">
-    <h1>Hello!</h1>
-    <p>
-      My name is Didrik Olofsson and I'm a computational biologist based in
-      Berlin, Germany. I have been working with genomic and transcriptomic data
-      analysis for 6+ years and am currently employed as Head of Bioinformatics
-      at
+<div>
+  <section class="text-center mb-4">
+    <h1>Didrik Olofsson</h1>
+    <h3 class="text-gray-500 font-medium">
+      Bioinformatics Scientist &<br />Co-founder at Omiqa Bioinformatics
+    </h3>
+  </section>
+  <section class="text-center">
+    <div class="space-x-4">
+      <a href="mailto:didrik.olofsson@omiqa.bio">Email</a>
       <a
-        class="underline text-blue-600 hover:text-blue-800"
-        href="https://omiqa.bio/"
-        >Omiqa Bioinformatics GmbH</a
-      >.
-    </p>
-  </div>
-  <div class="bg-slate-100 p-4 h-fit">
-    <h1>Research</h1>
-  </div>
-  <div class="bg-slate-100 p-4 h-fit">
-    <h1>Internships</h1>
-  </div>
-  <div class="bg-slate-100 p-4 h-fit">
-    <h1>Education</h1>
-  </div>
+        href="https://github.com/DidrikOlofsson"
+        target="_blank"
+        rel="noopener noreferrer"
+        >GitHub</a
+      >
+      <a
+        href="https://www.linkedin.com/in/didrik-olofsson-797b01187/"
+        target="_blank"
+        rel="noopener noreferrer"
+        >LinkedIn</a
+      >
+    </div>
+  </section>
+  <section>
+    <h3>About me</h3>
+    <div class="grid grid-cols-1 gap-4">
+      <p>
+        My name is Didrik Olofsson and I'm a computational biologist based in
+        Berlin, Germany. I have over 6 years experience of analyzing genomic and
+        transcriptomic data from a wide range of sources including short-read,
+        long-read, single-cell and bulk experiments. In 2020 I co-founded
+        <a href="https://omiqa.bio/" target="_blank" rel="noopener noreferrer"
+          >Omiqa Bioinformatics</a
+        >
+        where I currently work as Head of Bioinformatics.
+      </p>
+      <p>
+        I am passionate about finding patterns in high-complexity biological
+        datasets using state-of-the-art bioinformatic methods. In particular, I
+        enjoy designing and developing new data visualizations that help with
+        the interpretation and communication of such results. Also dabble in web
+        development from time to time.
+      </p>
+    </div>
+  </section>
+  <section>
+    <h3>Research experience</h3>
+    <div class="grid grid-cols-3 gap-x-12 gap-y-8">
+      {% for employment in site.data.employments %}
+      <div>
+        <p>{{employment.duration}}</p>
+        <p><strong>{{employment.title}}</strong></p>
+        <a href="{{employment.url}}" target="_blank" rel="noopener noreferrer"
+          >{{employment.company}}</a
+        >
+        <p>{{employment.location}}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+  <section>
+    <h3>Internships</h3>
+    <div class="grid grid-cols-3 gap-x-12 gap-y-8">
+      {% for internship in site.data.internships %}
+      <div>
+        <p>{{internship.duration}}</p>
+        <p><strong>{{internship.group}}</strong></p>
+        <a href="{{internship.url}}" target="_blank" rel="noopener noreferrer"
+          >{{internship.institution}}</a
+        >
+        <p>{{internship.location}}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+  <section>
+    <h3>Education</h3>
+    <div class="grid grid-cols-3 gap-x-12 gap-y-8">
+      {% for education in site.data.education %}
+      <div>
+        <p>{{education.duration}}</p>
+        <p><strong>{{education.degree}}, {{education.field}}</strong></p>
+        <a href="{{education.url}}" target="_blank" rel="noopener noreferrer"
+          >{{education.institution}}</a
+        >
+        <p>{{education.location}}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+  <section>
+    <h3>Stipends and grants</h3>
+    <div class="grid grid-cols-3 gap-x-12 gap-y-8">
+      {% for stipend in site.data.stipends %}
+      <div>
+        <p>{{stipend.duration}}</p>
+        <a href="{{stipend.url}}" target="_blank" rel="noopener noreferrer"
+          >{{stipend.title}}</a
+        >
+        <p>{{stipend.location}}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+  <section>
+    <h3>Skills</h3>
+    <div class="grid grid-cols-3 gap-x-12 gap-y-8">
+      {% for skill in site.data.skills %}
+      <div>
+        <p><strong>{{skill.title}}</strong></p>
+        {% for item in skill.items %}
+        <p class="text-gray-500">{{item}}</p>
+        {% endfor %}
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+  <section class="mb-2">
+    <h3>Publications</h3>
+    <div class="grid grid-cols-1">
+      <ul class="list-disc list-inside">
+        {% for publication in site.data.publications %}
+        <li class="mb-12">
+          {{publication.title}}
+          <a
+            href="{{publication.doi}}"
+            target="_blank"
+            rel="noopener noreferrer"
+            >{{publication.doi}}</a
+          >
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </section>
+  <footer>
+    <small class="text-gray-500">&copy; 2022 Didrik Olofsson</small>
+  </footer>
 </div>
