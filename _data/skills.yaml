@@ -1,0 +1,33 @@
+- title: Main expertise
+  items:
+    - Bioinformatic analysis
+    - Pipeline development
+    - Data visualization
+    - Task automation
+    - Project management
+
+- title: Technologies
+  items:
+    - Python
+    - R
+    - HTML, CSS, JavaScript
+    - Nextflow
+    - Git
+
+- title: Frameworks
+  items:
+    - Pandas
+    - Pysam
+    - Biopython
+    - Tidyverse
+
+- title: Infrastructure
+  items:
+    - High-performance computing
+    - Amazon Web Services
+
+- title: Languages
+  items:
+    - Swedish
+    - English
+    - German
