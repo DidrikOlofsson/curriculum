@@ -260,7 +260,7 @@ PLATFORMS
   x86_64-darwin-21
 
 DEPENDENCIES
-  github-pages (~> 227)
+  github-pages
   jekyll
   jekyll-postcss
   webrick
