@@ -10,7 +10,7 @@
     @apply bg-gray-50;
   }
   section {
-    @apply mb-28;
+    @apply mb-12 sm:mb-28;
   }
   h1 {
     @apply text-4xl mb-2 font-bold text-gray-700;
